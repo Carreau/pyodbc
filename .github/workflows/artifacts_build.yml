@@ -61,7 +61,7 @@ jobs:
           # https://cibuildwheel.readthedocs.io/en/stable/faq/#how-to-cross-compile
 
           CIBW_ARCHS_MACOS: arm64
-          CIBW_BEFORE_ALL: brew install unixodbc
+          CIBW_BEFORE_ALL_MACOS: brew install unixodbc
           CIBW_BUILD: cp311-*
 
 
