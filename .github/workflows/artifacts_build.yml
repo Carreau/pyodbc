@@ -61,6 +61,7 @@ jobs:
           # https://cibuildwheel.readthedocs.io/en/stable/faq/#how-to-cross-compile
 
           CIBW_ARCHS_MACOS: x86_64 arm64
+          CIBW_BEFORE_ALL: brew install unixodbc
 
 
           # Linux - based on CentOS 7; glibc 64-bit builds only; no bundled libraries
