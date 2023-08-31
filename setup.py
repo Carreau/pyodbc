@@ -145,7 +145,7 @@ def get_compiler_settings():
         if exit_status is None:
             cf = shlex.split(cflags)
             lf = shlex.split(ldflags)
-            print(cf, "...", lf)
+            print("MARKER", cf, "...", lf)
             settings["extra_compile_args"].extend(cf)
             settings["extra_link_args"].extend(lf)
         else:
