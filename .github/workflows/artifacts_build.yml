@@ -44,7 +44,7 @@ jobs:
           CIBW_REPAIR_WHEEL_COMMAND_MACOS: ""
           CIBW_BUILD: cp311-*
           CIBW_BUILD_VERBOSITY: 3
-          CIBW_BEFORE_ALL_MACOS: NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          CIBW_BEFORE_ALL_MACOS: NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh); /usr/local/bin/brew install unixodbc; whcih brew"
 
 
 
