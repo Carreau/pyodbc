@@ -138,7 +138,7 @@ def get_compiler_settings():
                 "odbc_config not found.  Is unixODBC installed? (brew or conda install unixodbc)"
             )
 
-        pipe = os.popen('odbc_config --cflags --libs 2>/dev/null')
+        pipe = os.popen("/opt/homebrew/bin/odbc_config --cflags --libs 2>/dev/null")
         cflags, ldflags = pipe.readlines()
         exit_status = pipe.close()
 
