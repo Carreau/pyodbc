@@ -43,6 +43,7 @@ jobs:
           CIBW_ARCHS_MACOS: arm64
           CIBW_REPAIR_WHEEL_COMMAND_MACOS: ""
           CIBW_BUILD: cp311-*
+          CIBW_BUILD_VERBOSITY: 3
 
 
           # Linux - based on CentOS 7; glibc 64-bit builds only; no bundled libraries

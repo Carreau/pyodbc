@@ -142,6 +142,8 @@ def get_compiler_settings():
         cflags, ldflags = pipe.readlines()
         exit_status = pipe.close()
 
+        print("HERE")
+
         if exit_status is None:
             cf = shlex.split(cflags)
             lf = shlex.split(ldflags)
