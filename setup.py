@@ -143,9 +143,13 @@ def get_compiler_settings():
         exit_status = pipe.close()
 
         if exit_status is None:
-            settings['extra_compile_args'].extend(shlex.split(cflags))
-            settings['extra_link_args'].extend(shlex.split(ldflags))
+            cf = shlex.split(cflags)
+            lf = shlex.split(ldflags)
+            print(cf, "...", lf)
+            settings["extra_compile_args"].extend(cf)
+            settings["extra_link_args"].extend(lf)
         else:
+            assert False
             settings['libraries'].append('odbc')
             # Add directories for MacPorts and Homebrew.
             dirs = [
