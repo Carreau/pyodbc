@@ -139,7 +139,9 @@ def get_compiler_settings():
             )
 
         pipe = os.popen("/opt/homebrew/bin/odbc_config --cflags --libs 2>/dev/null")
-        cflags, ldflags = pipe.readlines()
+        cl = pipe.readlines()
+        print(cl)
+        cflags, ldflags = cl
         exit_status = pipe.close()
 
         print("HERE")
