@@ -44,7 +44,8 @@ jobs:
           CIBW_REPAIR_WHEEL_COMMAND_MACOS: ""
           CIBW_BUILD: cp311-*
           CIBW_BUILD_VERBOSITY: 3
-          CIBW_BEFORE_ALL_MACOS: brew remove --ignore-dependencies unixodbc; ls /opt/
+          CIBW_BEFORE_ALL_MACOS: NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 
 
           # Linux - based on CentOS 7; glibc 64-bit builds only; no bundled libraries
