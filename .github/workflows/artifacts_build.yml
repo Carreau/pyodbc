@@ -47,8 +47,8 @@ jobs:
           CIBW_BEFORE_ALL_MACOS: > 
             NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" &&
             which brew &&
-            /usr/local/bin/brew reinstall unixodbc
-            arch
+            /usr/local/bin/brew reinstall unixodbc &&
+            arch &&
             file -b $(which odbc_config)
 
 
