@@ -62,6 +62,7 @@ jobs:
 
           CIBW_ARCHS_MACOS: x86_64 arm64
           CIBW_BEFORE_ALL: brew install unixodbc
+          CIBW_BUILD: cp311-*
 
 
           # Linux - based on CentOS 7; glibc 64-bit builds only; no bundled libraries
